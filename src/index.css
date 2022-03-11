@@ -1,0 +1,280 @@
+html, body, #root, .App {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto ', 'Serge UI';
+  background-color:#c4c9c7;
+  color: #1a3c11;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 5px 5px grey;
+  margin: 30px 15px;
+  border: 1px solid #c4c9c7;
+  cursor: pointer;
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.item-album {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 150px;
+  width: 70%;
+  box-shadow: 5px 5px 5px grey;
+  margin: 30px 15px;
+  border: 1px solid #c4c9c7;
+}
+
+.titre {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%,0);
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  width: 280px;
+}
+.titre-album {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%,0);
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+  width: 70%;
+}
+
+.artiste {
+  position: absolute;
+  bottom:2px;
+  left: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: oblique;
+} 
+
+.annee {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: oblique;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+} 
+
+.jaquette {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.genre {
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.pager {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: #ececec;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 50px;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.page-debut {
+  position: absolute;
+  left: 10px;
+  top:50%;
+  transform: translate(0,-50%);
+  cursor:pointer;
+}
+
+.page-precedente {
+  position: absolute;
+  left: 40px;
+  top:50%;
+  transform: translate(0,-50%);
+  cursor:pointer;
+}
+
+.page-courante {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  cursor:pointer;
+}
+
+.page-suivante {
+  position: absolute;
+  right: 40px;
+  top:50%;
+  transform: translate(0,-50%);
+  cursor:pointer;
+}
+
+.page-finale {
+  position: absolute;
+  right: 10px;
+  top:50%;
+  transform: translate(0,-50%);
+  cursor:pointer;
+}
+
+.sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ececec;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0  auto 50px;
+  box-shadow: 1px 1px 0.2em darkslategrey;
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbd9d9;
+  margin: 20px ;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  padding: 0 20px;
+  cursor:pointer;
+}
+
+.name-tri {
+  margin-right:20px;
+  font-weight: 600;
+  font-family: 'Roboto', 'Serge UI';
+  color: #1a3c11;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.disable {
+  color: grey;
+}
+
+.active {
+  background: #99c68e;
+}
+.item a {
+  text-decoration: none;
+  color: #1a3c11;
+}
+
+.list-tracks {
+  display: block;
+  justify-content: center;
+  align-item: flex-start;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 18px;
+  width: 60%;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px grey;
+  margin: 30px 15px;
+  border: 1px solid #c4c9c7;
+  padding: 10px;
+}
+
+span {
+  font-weight: bold;
+} 
+.disque {
+  display: flex;
+  width: 90px;
+}
+
+.line {
+  width: 15%
+}
+
+.line:nth-child(3n) {
+  width: 40%;
+}
+
+.line:first-child {
+  margin-left: 60px;
+}
+
+/* Bouton retour */
+.return a {
+  display: block;
+  width: 50px;
+  height: 40px;
+  color: #1a3c11;
+  position: relative;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.return a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 50%;
+  background: #A3BE8C;
+  transition: all 0.4s;
+  border-radius: 10%;
+}
+
+.return a:hover {
+  color: #ececec;
+}
+
+.return a:hover:after {
+  width: 100%;
+}
+
+.return-icon {
+  position: relative;
+  z-index: 4;
+  width: 40px;
+}
+
+/* Loader */
+.fa-spinner {
+  font-size:80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+}  
