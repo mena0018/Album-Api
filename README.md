@@ -1,8 +1,8 @@
 # Album-Api made with React (and react-router)
 
 ```bash
-git clone https://github.com/mena0018/Album-Api
-cd Album-Api
+git clone https://github.com/mena0018/React-Album-Api.git
+cd React-Album-Api
 npm install
 npm start
 http://localhost:3000/
