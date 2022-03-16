@@ -8,7 +8,7 @@ export default function AlbumDetail({ album }) {
     return (
       <>
         <div key={album.id} className="item-album"> 
-            <div class="return">
+            <div className="return">
               <Link to="/">
                 <div className="return-icon"><FontAwesomeIcon icon={faHome} /> </div>
               </Link>
